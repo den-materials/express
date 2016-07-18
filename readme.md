@@ -317,3 +317,7 @@ Here's a recommended way to structure a simple web application:
 * [What is npm?](https://www.youtube.com/watch?v=x03fjb2VlGY)
 * [Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer) and [example RESTful actions](http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions) (Rails specific example, but it doesn't matter)
 * Hitting an API with [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) and an [example request](https://gist.github.com/iliastsangaris/e705bba1515e6d840e4c3cac25519721)
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
