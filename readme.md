@@ -7,8 +7,8 @@
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!--10:30 5 minutes -->
-<!--Hook: Remember when we were using web APIs like Google Maps and USGS for Geoquakes?  Raise your hand if you'd like to make one of those yourself.  Either way (good/too bad), that's what we're doing today. -->
+<!--9:30 5 minutes -->
+<!--Hook: Remember when we were using web APIs like Shakeitspeare and OMDB?  Raise your hand if you'd like to make one of those yourself.  Either way (good/too bad), that's what we're doing today. -->
 
 # Building Web Servers with Express
 
@@ -34,11 +34,11 @@ Express is a simple, flexible JavaScript library that enables us to more easily 
 * **Write** proficient JavaScript
 * **Build** a simple web server with Node's `http` module
 
-<!--10:35 15 minutes -->
+<!--9:35 15 minutes -->
 
 ## npm
 
-*npm* started a the "node package manager", but according to npm it now apparently doesn't stand for anything. Either way, it's a tool that allows us to easily download community-built node modules.
+*npm* started as the "node package manager", but according to npm it now apparently doesn't stand for anything. Either way, it's a tool that allows us to easily download community-built node modules.
 
 You can initialize a new node project in an empty directory using npm with `npm init -y` and install packages like `express` with `npm install --save express`.
 
@@ -46,13 +46,15 @@ npm uses a file called `package.json` to track *dependencies* and *metadata* ass
 
 A separate `node_modules` directory is where the modules your project requires will be housed. When using git, be mindful to add `node_modules` to a `.gitignore` file so it is *not tracked by git*.
 
-At this point you can share the project code and future developers will run `npm install` to get the packages listed in `package.json` (instead of through git), which save git from also having to track a large `node_modules` folder.
+At this point you can share the project code and future developers will run `npm install` to get the packages listed in `package.json` (instead of through git), which saves git from also having to track a large `node_modules` folder.
 
 > Challenge: initialize a new project and use npm to require `express` in it. Follow the best practices listed above so you could easily share the project with another developer.
 
 ## Request Response Cycle
 
 ![request](http://i.imgur.com/YXgj8.png)
+
+<!-- Catch-up, when turning over to students, allow them to view projector but *no copy-paste* -->
 
 ## Setup Express
 
@@ -99,9 +101,9 @@ node server.js
 
 Navigate to `http://localhost:3000` and voila!
 
-<!-- 10:50 5 minutes -->
+<!-- 9:50 5 minutes -->
 
-##Routes & Controllers
+## Routes & Controllers
 
 Your application's **routes** comprise all the possible HTTP verb & path combinations it will respond to. A **controller** is the callback that is executed after any given route is hit. Let's look at it again.
 
@@ -122,7 +124,7 @@ function homeController(req, res) { // a controller that handles a specific requ
 app.get('/', homeController); // a GET to "/" routes to homeController
 ```
 
-<!--10:55 10 minutes -->
+<!--9:55 10 minutes -->
 
 ## MiddleWare
 
@@ -150,7 +152,9 @@ app.get('/', function(req, res) {
 
 Let's go through this. After setting up our app and before our routes we tell our app to use a new function we are providing. That's all Middleware is! When writing custom Middleware, it's best practice to pass in the **req** object, the **res** object and finally **next**, _even if we don't use it!_ In this case, we are simply logging out the request method ('GET') and the request path ('/').
 
-<!--11:05 10 minutes -->
+<!--Make sure you show this result in the terminal, and emphasize the order -->
+
+<!--10:05 10 minutes -->
 
 ## Render JSON
 
@@ -215,17 +219,11 @@ app.listen(port, function() {
 });
 ```
 
-> Challenge: render a list of cafes as JSON under the route `/api/cafes`. Include 3 cafes, each with a `name` and a `rating` (1-5). Test it by going to your server's address. BONUS: Try testing it on the command line using `curl`. 
+> Challenge: render a list of cafes as JSON under the route `/api/cafes`. Include 3 cafes, each with a `name` and a `rating` (1-5). Test it by going to your server's address. BONUS: Try testing it with Postman. 
 
-<!--11:15 10 minutes -->
+<!--10:15 10 minutes -->
 
-## Static Assets
-
-Hardcoded hypertext, scripts, stylesheets, and images are all examples of **static assets** in a web application. These files *do not change often*, only when the application is updated. Instead, *changing data* in combination with a language like JavaScript (to render the changes) is what gives a web application dynamic behavior. You already know how to template data dynamically on the client-side with handlebars.
-
-> Note: We'll be discussing other methods of templating on the server-side in the future.
-
-#### Render HTML
+## Render HTML
 
 Maybe instead of sending the client back a JSON file we want to send them HTML instead. Let's make a directory called `views` and inside of it, touch a file `index.html`. Here's some code to get you started.
 
@@ -259,7 +257,7 @@ app.get('/', function(req, res) {
 
 > Pro Tip: Restarting the server after every change is annoying. Consider using [nodemon](http://nodemon.io/) to help solve this problem.
 
-<!-- 11:25 10 minutes -->
+<!-- 10:25 10 minutes -->
 #### Serve a Public Directory
 
 HTML files often require many assets, such as scripts, stylesheets, images, videos, icons, etc. As a result we should probably have a place we can store all those public assets.
@@ -279,7 +277,7 @@ HTML files often require many assets, such as scripts, stylesheets, images, vide
 
 > Challenge: Add a `public/styles` directory with a `main.css` file inside. Use that stylesheet to change your home page's background color to pink.
 
-<!--11:35 5 minutes -->
+<!--10:35 5 minutes -->
 
 ## Example Express File Tree
 
@@ -300,7 +298,7 @@ Here's a recommended way to structure a simple web application:
     ├── express // etc
 ```
 
-<!--11:40 5 minutes -->
+<!--10:40 5 minutes -->
 
 ## Closing Thoughts
 
@@ -310,7 +308,7 @@ Here's a recommended way to structure a simple web application:
 * What is the difference between a path, an http verb, and a route?
 * What is a controller?
 * Why do we sometimes want to render JSON and sometimes want to render HTML?
-* What are static assets?
+* Why do we usually serve up a public directory with Express?
 
 ## Additional Resources
 
