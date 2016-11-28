@@ -7,6 +7,8 @@
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!-- There were SOOO many questions in this class, we didn't finish
+
 <!--9:30 5 minutes -->
 <!--Hook: Remember when we were using web APIs like Shakeitspeare and OMDB?  Raise your hand if you'd like to make one of those yourself.  Either way (good/too bad), that's what we're doing today. -->
 
