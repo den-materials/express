@@ -48,8 +48,6 @@ A separate `node_modules` directory is where the modules your project requires w
 
 At this point you can share the project code and future developers will run `npm install` to get the packages listed in `package.json` (instead of through git), which saves git from also having to track a large `node_modules` folder.
 
-> Challenge: initialize a new project and use npm to require `express` in it. Follow the best practices listed above so you could easily share the project with another developer.
-
 ## Request Response Cycle
 
 ![request](http://i.imgur.com/YXgj8.png)
@@ -58,16 +56,19 @@ At this point you can share the project code and future developers will run `npm
 
 ## Setup Express
 
+> Challenge: initialize a new project and use npm to require `express` in it. Follow the best practices listed above so you could easily share the project with another developer.
+
 To review:
 
 1. `mkdir first-express-app`
 2. `cd first-express-app`
 3. `npm init -y`
 4. `npm install express --save`
+5. `touch .gitignore` and put node_modules inside
 
 Now let's make our server:
 
-5. `touch server.js` in first-express-app directory
+6. `touch server.js` in first-express-app directory
 
 **server.js**
 
@@ -91,7 +92,7 @@ app.listen(port, function() {
 
 Notice the `GET` verb in combination with the `/` path here. These are the two things needed to route an HTTP request.
 
->Can you give an example of the verb/path combination that would be appropriate for reading the "about" page?
+>Can you give the verb/path combination that would be appropriate for reading the "about" page?
 
 Now let's run our server
 
@@ -154,7 +155,7 @@ Let's go through this. After setting up our app and before our routes we tell ou
 
 <!--Make sure you show this result in the terminal, and emphasize the order -->
 
-<!--10:05 10 minutes -->
+<!--10:05 15 minutes -->
 
 ## Render JSON
 
@@ -221,7 +222,7 @@ app.listen(port, function() {
 
 > Challenge: render a list of cafes as JSON under the route `/api/cafes`. Include 3 cafes, each with a `name` and a `rating` (1-5). Test it by going to your server's address. BONUS: Try testing it with Postman. 
 
-<!--10:15 10 minutes -->
+<!--10:20 10 minutes -->
 
 ## Render HTML
 
@@ -257,7 +258,7 @@ app.get('/', function(req, res) {
 
 > Pro Tip: Restarting the server after every change is annoying. Consider using [nodemon](http://nodemon.io/) to help solve this problem.
 
-<!-- 10:25 10 minutes -->
+<!-- 10:30 10 minutes -->
 #### Serve a Public Directory
 
 HTML files often require many assets, such as scripts, stylesheets, images, videos, icons, etc. As a result we should probably have a place we can store all those public assets.
@@ -277,7 +278,7 @@ HTML files often require many assets, such as scripts, stylesheets, images, vide
 
 > Challenge: Add a `public/styles` directory with a `main.css` file inside. Use that stylesheet to change your home page's background color to pink.
 
-<!--10:35 5 minutes -->
+<!--10:40 5 minutes -->
 
 ## Example Express File Tree
 
@@ -298,7 +299,7 @@ Here's a recommended way to structure a simple web application:
     ├── express // etc
 ```
 
-<!--10:40 5 minutes -->
+<!--10:45 5 minutes -->
 
 ## Closing Thoughts
 
@@ -314,7 +315,6 @@ Here's a recommended way to structure a simple web application:
 
 * [What is npm?](https://www.youtube.com/watch?v=x03fjb2VlGY)
 * [Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer) and [example RESTful actions](http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions) (Rails specific example, but it doesn't matter)
-* Hitting an API with [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) and an [example request](https://gist.github.com/iliastsangaris/e705bba1515e6d840e4c3cac25519721)
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
