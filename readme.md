@@ -48,10 +48,6 @@ A separate `node_modules` directory is where the modules your project requires w
 
 At this point you can share the project code and future developers will run `npm install` to get the packages listed in `package.json` (instead of through git), which saves git from also having to track a large `node_modules` folder.
 
-## Request Response Cycle
-
-![request](http://i.imgur.com/YXgj8.png)
-
 <!-- Catch-up, when turning over to students, allow them to view projector but *no copy-paste* -->
 
 ## Setup Express
@@ -65,6 +61,10 @@ To review:
 3. `npm init -y`
 4. `npm install express --save`
 5. `touch .gitignore` and put node_modules inside
+
+## Request Response Cycle
+
+![request](http://i.imgur.com/YXgj8.png)
 
 Now let's make our server:
 
