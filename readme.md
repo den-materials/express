@@ -38,6 +38,10 @@ Express is a simple, flexible JavaScript library that enables us to more easily 
 
 <!--9:35 15 minutes -->
 
+## Request Response Cycle
+
+![request](http://i.imgur.com/YXgj8.png)
+
 ## npm
 
 *npm* started as the "node package manager", but according to npm it now apparently doesn't stand for anything. Either way, it's a tool that allows us to easily download community-built node modules.
@@ -63,10 +67,6 @@ To review:
 3. `npm init -y`
 4. `npm install express --save`
 5. `touch .gitignore` and put node_modules inside
-
-## Request Response Cycle
-
-![request](http://i.imgur.com/YXgj8.png)
 
 Now let's make our server:
 
