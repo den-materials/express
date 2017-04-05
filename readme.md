@@ -7,8 +7,9 @@
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!-- There were SOOO many questions in this class, we didn't finish
+<!-- There were SOOO many questions in this class in WDI2, we didn't finish -->
 
+<!--WDI3 9:42 -->
 <!--9:30 5 minutes -->
 <!--Hook: Remember when we were using web APIs like Shakeitspeare and OMDB?  Raise your hand if you'd like to make one of those yourself.  Either way (good/too bad), that's what we're doing today. -->
 
@@ -36,6 +37,7 @@ Express is a simple, flexible JavaScript library that enables us to more easily 
 * **Write** proficient JavaScript
 * **Build** a simple web server with Node's `http` module
 
+<!--WDI3 9:43 -->
 <!--9:35 15 minutes -->
 
 ## Request Response Cycle
@@ -104,6 +106,7 @@ node server.js
 
 Navigate to `http://localhost:3000` and voila!
 
+<!--WDI3 10:05 -->
 <!-- 9:50 5 minutes -->
 
 ## Routes & Controllers
@@ -127,6 +130,7 @@ function homeController(req, res) { // a controller that handles a specific requ
 app.get('/', homeController); // a GET to "/" routes to homeController
 ```
 
+<!--10:07 -->
 <!--9:55 10 minutes -->
 
 ## MiddleWare
@@ -157,6 +161,7 @@ Let's go through this. After setting up our app and before our routes we tell ou
 
 <!--Make sure you show this result in the terminal, and emphasize the order -->
 
+<!--10:21 WDI3-->
 <!--10:05 15 minutes -->
 
 ## Render JSON
@@ -224,6 +229,7 @@ app.listen(port, function() {
 
 > Challenge: render a list of cafes as JSON under the route `/api/cafes`. Include 3 cafes, each with a `name` and a `rating` (1-5). Test it by going to your server's address. BONUS: Try testing it with Postman. 
 
+<!--10:31 WDI3 -->
 <!--10:20 10 minutes -->
 
 ## Render HTML
@@ -260,6 +266,7 @@ app.get('/', function(req, res) {
 
 > Pro Tip: Restarting the server after every change is annoying. Consider using [nodemon](http://nodemon.io/) to help solve this problem.
 
+<!-- 10:41 WDI3-->
 <!-- 10:30 10 minutes -->
 #### Serve a Public Directory
 
@@ -280,6 +287,7 @@ HTML files often require many assets, such as scripts, stylesheets, images, vide
 
 > Challenge: Add a `public/styles` directory with a `main.css` file inside. Use that stylesheet to change your home page's background color to pink.
 
+<!--10:54 WDI3 -->
 <!--10:40 5 minutes -->
 
 ## Example Express File Tree
@@ -312,6 +320,8 @@ Here's a recommended way to structure a simple web application:
 * What is a controller?
 * Why do we sometimes want to render JSON and sometimes want to render HTML?
 * Why do we usually serve up a public directory with Express?
+
+<!--11:05 WDI3 -->
 
 ## Additional Resources
 
