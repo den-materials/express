@@ -11,7 +11,7 @@
 
 <!--WDI3 9:42 -->
 <!--9:30 5 minutes -->
-<!--Hook: Remember when we were using web APIs like Shakeitspeare and OMDB?  Raise your hand if you'd like to make one of those yourself.  Either way (good/too bad), that's what we're doing today. -->
+<!--Hook: Remember when we were using web APIs like Shakeitspeare and Google?  Raise your hand if you'd like to make one of those yourself.  Either way (good/too bad), that's what we're doing today. -->
 
 # Building Web Servers with Express
 
@@ -151,10 +151,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', function(req, res) {
+function homeController(req, res) { // a controller that handles a specific request
   console.log("home controller hit");
   res.send("You're Home!");
-});
+}
 ```
 
 Let's go through this. After setting up our app and before our routes we tell our app to use a new function we are providing. That's all Middleware is! When writing custom Middleware, it's best practice to pass in the **req** object, the **res** object and finally **next**, _even if we don't use it!_ In this case, we are simply logging out the request method ('GET') and the request path ('/').
@@ -203,6 +203,12 @@ const taquerias = [
   { name: "Taqueria Cancun" }
 ]
 
+// home controller
+function homeController(req, res) { // a controller that handles a specific request
+  console.log("home controller hit");
+  res.send("You're Home!");
+}
+
 // middleware
 app.use(function(req, res, next) {
   console.log("middleware hit");
@@ -211,10 +217,7 @@ app.use(function(req, res, next) {
 });
 
 // home controller
-app.get('/', function(req, res) {
-  console.log("home controller hit");
-  res.send("You're Home!");
-});
+app.get('/', homeController);
 
 // taquerias api index route
 app.get('/api/taquerias', function (req, res) {
@@ -256,10 +259,10 @@ Now when the user visits the root route (home), instead of sending back just a s
 
 ```js
 // home controller
-app.get('/', function(req, res) {
+function homeController(req, res) { // a controller that handles a specific request
   console.log("home controller hit");
   res.sendFile(__dirname + "/views/index.html");
-});
+}
 ```
 
 > Note: __dirname is the path of where `server.js` is located.
