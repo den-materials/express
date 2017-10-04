@@ -11,6 +11,7 @@
 
 <!--WDI3 9:42 -->
 <!--WDI4 9:43 -->
+<!--WDI5 9:43 -->
 <!--9:30 5 minutes -->
 <!--Hook: Remember when we were using web APIs like Shakeitspeare and Google?  Raise your hand if you'd like to make one of those yourself.  Either way (good/too bad), that's what we're doing today. -->
 
@@ -46,6 +47,8 @@ Express is a simple, flexible JavaScript library that enables us to more easily 
 
 ![request](http://i.imgur.com/YXgj8.png)
 
+<!--9:51 WDI5-->
+
 ## npm
 
 *npm* started as the "node package manager", but according to npm it now apparently doesn't stand for anything. Either way, it's a tool that allows us to easily download community-built node modules.
@@ -71,6 +74,8 @@ To review:
 3. `npm init -y`
 4. `npm install express --save`
 5. `touch .gitignore` and put node_modules inside
+
+<!--WDI5 10:02 -->
 
 Now let's make our server:
 
@@ -108,6 +113,7 @@ node server.js
 
 Navigate to `http://localhost:3000` and voila!
 
+<!--WDI5 10:17 -->
 <!--WDI4 10:14 -->
 <!--WDI3 10:05 -->
 <!-- 9:50 5 minutes -->
@@ -133,6 +139,7 @@ function homeController(req, res) { // a controller that handles a specific requ
 app.get('/', homeController); // a GET to "/" routes to homeController
 ```
 
+<!--WDI5 10:21 -->
 <!--WDI4 10:21 -->
 <!--10:07 -->
 <!--9:55 10 minutes -->
@@ -165,6 +172,7 @@ Let's go through this. After setting up our app and before our routes we tell ou
 
 <!--Make sure you show this result in the terminal, and emphasize the order -->
 
+<!--WDI5 10:30 -->
 <!--WDI4 10:35-->
 <!--10:21 WDI3-->
 <!--10:05 15 minutes -->
@@ -237,6 +245,7 @@ app.listen(port, function() {
 
 > Challenge: render a list of cafes as JSON under the route `/api/cafes`. Include 3 cafes, each with a `name` and a `rating` (1-5). Test it by going to your server's address. BONUS: Try testing it with Postman. 
 
+<!--WDI5 10:46 -->
 <!--10:31 WDI3 -->
 <!--10:52 WDI4 -->
 <!--10:20 10 minutes -->
@@ -275,6 +284,7 @@ function homeController(req, res) { // a controller that handles a specific requ
 
 > Pro Tip: Restarting the server after every change is annoying. Consider using [nodemon](http://nodemon.io/) to help solve this problem.
 
+<!--WDI5 10:54 -->
 <!--WDI4 10:59-->
 <!-- 10:41 WDI3-->
 <!-- 10:30 10 minutes -->
@@ -297,6 +307,7 @@ HTML files often require many assets, such as scripts, stylesheets, images, vide
 
 > Challenge: Add a `public/styles` directory with a `main.css` file inside. Use that stylesheet to change your home page's background color to pink.
 
+<!--WDI5 11:06 -->
 <!--WDI4 11:13 -->
 <!--10:54 WDI3 -->
 <!--10:40 5 minutes -->
@@ -334,6 +345,7 @@ Here's a recommended way to structure a simple web application:
 
 <!--11:05 WDI3 -->
 <!--11:24 WDI4 -->
+<!--WDI5 11:14 -->
 
 ## Additional Resources
 
