@@ -294,16 +294,16 @@ HTML files often require many assets, such as scripts, stylesheets, images, vide
 
 1. Make a directory in your project called `public`; then create a `public/scripts` subdirectory. Make an `app.js` in this subdirectory.
 
-1. Set up the express app to serve the static files in the public directory.
+2. Set up the express app to serve the static files in the public directory.
 
   ```js
     // server.js
     app.use(express.static('public'));
   ```
 
-1. Get a `console.log("Sanity Check: JS is working!")` from your `app.js` to appear in your browser dev tools console.
+3. Get a `console.log("Sanity Check: JS is working!")` from your `app.js` to appear in your browser dev tools console.
 
->Tip: Reference the path `/scripts/app.js` in your HTML page (the public folder now lives at the root of your application's directory).
+<!-- >Tip: Reference the path `/scripts/app.js` in your HTML page (the public folder now lives at the root of your application's directory). -->
 
 > Challenge: Add a `public/styles` directory with a `main.css` file inside. Use that stylesheet to change your home page's background color to pink.
 
