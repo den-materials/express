@@ -301,9 +301,9 @@ HTML files often require many assets, such as scripts, stylesheets, images, vide
     app.use(express.static('public'));
   ```
 
-3. Get a `console.log("Sanity Check: JS is working!")` from your `app.js` to appear in your browser dev tools console.
+3. You can reference `/scripts/app.js` in your HTML page using the <script> tag, like you have been doing in Unit 1. This is the front end of the app.
 
-<!-- >Tip: Reference the path `/scripts/app.js` in your HTML page (the public folder now lives at the root of your application's directory). -->
+4. Get a `console.log("Sanity Check: JS is working!")` from your `app.js` to appear in your browser dev tools console.
 
 > Challenge: Add a `public/styles` directory with a `main.css` file inside. Use that stylesheet to change your home page's background color to pink.
 
